@@ -1,4 +1,7 @@
 # luogu-wordcloud
+
+![](https://github.com/konyakest/luogu-wordcloud/blob/main/image.png)
+
 从 luogu 提交记录爬取代码，并生成词云
 
 ## 安装
