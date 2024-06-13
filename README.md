@@ -47,5 +47,6 @@ pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 - ``output_file``：输出的图片文件名，默认为 ``wordcloud.png``
 - ``background_color``：背景颜色，默认为 ``white``
 - ``ignore_words``：去掉这些关键词
+- ``ignore_cnt``：去掉出现次数多于此值的关键词，默认为 10000
 
 具体用法可参见 ``all_configs.json``
