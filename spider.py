@@ -60,23 +60,27 @@ def show():
 
 for problem_id in problems:
     print(f"{cnt}/{total} ({cnt/(total)*100:.2f}%): 正在爬取 {problem_id}")
-    id = luogu_get(
-        f"https://www.luogu.com.cn/record/list?pid={problem_id}&\
-          user={PERSON_UID}&status=12&page=1",
-    )["records"]["result"][0]["id"]
+    try:
+        id = luogu_get(
+            f"https://www.luogu.com.cn/record/list?pid={problem_id}&\
+            user={PERSON_UID}&status=12&page=1",
+        )["records"]["result"][0]["id"]
 
-    content = luogu_get(
-        f"https://www.luogu.com.cn/record/{id}",
-    )["record"]["sourceCode"]
+        content = luogu_get(
+            f"https://www.luogu.com.cn/record/{id}",
+        )["record"]["sourceCode"]
 
-    for word in re.findall("\w+", content):
-        words[word] = words.get(word, 0) + 1
+        for word in re.findall("\w+", content):
+            words[word] = words.get(word, 0) + 1
 
-    if CONFIGS.get("save_files", False):
-        open(f"{CONFIGS.get('files_dir_name', 'codes')}/{problem_id}.cpp",
-             "w").write(content)
+        if CONFIGS.get("save_files", False):
+            open(f"{CONFIGS.get('files_dir_name', 'codes')}/{problem_id}.cpp",
+                "w").write(content)
 
-    print(f"{id} 爬取完毕！")
+        print(f"{id} 爬取完毕！")
+    except:
+        print(f"{id} 爬取失败！")
+
     sleep(1)
     cnt += 1
 

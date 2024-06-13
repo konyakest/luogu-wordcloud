@@ -2,15 +2,15 @@
     "spider_configs": {
         "uid": 482660,
         "client_id": "xxxxxxxxxxx",
-        "difficulties": "0",
+        "difficulties": "567",
         "person_uid": 205681,
         "save_files": false,
-        "files_dir_name": "yyy",
+        "files_dir_name": "codes",
         "sample_count": 10
     },
     "cloud_configs": {
         "output_size": 1000,
-        "output_file": "wordcloudsss.png",
+        "output_file": "wordcloud.png",
         "background_color": "white",
         "ignore_words": [
             "int",
