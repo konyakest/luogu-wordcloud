@@ -16,6 +16,7 @@
             "int",
             "i","0","a","n","b","1","x","s","m","g","h"
         ],
-        "ignore_cnt": 10000
+        "ignore_cnt": 10000, 
+        "filter": "lambda x:True"
     }
 }

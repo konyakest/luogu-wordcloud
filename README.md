@@ -48,5 +48,8 @@ pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 - ``background_color``：背景颜色，默认为 ``white``
 - ``ignore_words``：去掉这些关键词
 - ``ignore_cnt``：去掉出现次数多于此值的关键词，默认为 10000
+- ``filter``：按照一个 ``lambda`` 过滤关键词，默认为 ``lambda x:True``，该 ``lambda`` 传入一个长度为 2 的 ``list``（``[word, cnt]``），返回 ``bool``
+
+    例如 ``lambda x:len(x[0]) >= 2 and x[1]<=1000`` 选择所有长度大于等于 2 且出现次数小于等于 1000 的单词
 
 具体用法可参见 ``all_configs.json``
