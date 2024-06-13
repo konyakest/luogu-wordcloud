@@ -53,3 +53,5 @@ pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
     例如 ``lambda x:len(x[0]) >= 2 and x[1]<=1000`` 选择所有长度大于等于 2 且出现次数小于等于 1000 的单词
 
 具体用法可参见 ``all_configs.json``
+- ``mask``：指定遮罩图片
+- ``scale``：指定相对于遮罩图片的放大倍数，默认为 1（指定了遮罩图片后，``output_size`` 项失效）
