@@ -38,7 +38,7 @@ pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 - ``difficulties``：选择的题目的难度范围，例如 "``012``" 表示选择“灰，红，橙”，默认为“``567``”（“蓝，紫，黑”）
 - ``person_uid``：指定要爬取的用户的用户名，默认为 ``uid`` 的值
 - ``save_files``：是否保存爬取到的代码，默认为 ``false``
-- ``files_dir_name``：将代码保存在哪个文件夹下
+- ``files_dir_name``：将代码保存在哪个文件夹下，默认为 ``codes``
 - ``sample_count``：从题目中随机选择若干道题进行爬取，不填表示选择全部
 
 ``cloud_configs`` 中：
