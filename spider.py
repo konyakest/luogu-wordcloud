@@ -4,7 +4,7 @@ from json import load, loads, dumps
 from time import sleep
 from random import sample
 from os import mkdir
-import re
+from re import findall
 
 CONFIGS = load(open("configs.json"))["spider_configs"]
 CLIENT_ID = CONFIGS["client_id"]
@@ -70,7 +70,7 @@ for problem_id in problems:
             f"https://www.luogu.com.cn/record/{id}",
         )["record"]["sourceCode"]
 
-        for word in re.findall("\w+", content):
+        for word in findall("\w+", content):
             words[word] = words.get(word, 0) + 1
 
         if CONFIGS.get("save_files", False):
