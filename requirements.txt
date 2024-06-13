@@ -1,4 +1,4 @@
 requests
 wordcloud
 pillow==9.3.0
-opencv-python
+opencv-python>=4.10.0.82
